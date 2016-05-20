@@ -9,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.AppCompatTextView;
 import android.widget.Toast;
 
+import com.example.wxq.wxqfirstlibrary.Utils;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -36,7 +38,7 @@ public class MainActivity extends FragmentActivity {
     private void initview() {
 
         tv = (AppCompatTextView) findViewById(R.id.tv_text);
-        tv.setText("hasChanged");
+        tv.setText(Utils.getWxqName());
 
         idViewpage.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
